@@ -160,4 +160,7 @@ function handleClick(key) {
 function activateAnimation(currentKey){
   actKey=document.querySelector("."+currentKey);
   actKey.classList.add("pressed");
+  setTimeout(function(){
+    actKey.classList.remove("pressed");
+    },200);
 }
