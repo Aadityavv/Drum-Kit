@@ -112,10 +112,12 @@ for (var i = 0; i < numberOfDrums; i++) {
   drumButtons[i].addEventListener("mouseover", function() {
     var buttonInnerHTML = this.innerHTML;
     handleClick(buttonInnerHTML);
+    activateAnimation(buttonInnerHTML);
   });
 }
 
 document.addEventListener("keypress", function(event) {
+  handleClick(event.key);
   handleClick(event.key);
 });
 
@@ -153,4 +155,9 @@ function handleClick(key) {
   
       break;
   }
+}
+
+function activateAnimation(currentKey){
+  actKey=document.querySelector("."+currentKey);
+  actKey.classList.add("pressed");
 }
