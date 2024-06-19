@@ -115,8 +115,8 @@ for (var i = 0; i < numberOfDrums; i++) {
   });
 }
 
-document.addEventListener("keypress", function(aadi) {
-  handleClick(aadi.key);
+document.addEventListener("keypress", function(event) {
+  handleClick(event.key);
 });
 
 function handleClick(key) {
